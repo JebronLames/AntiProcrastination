@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  priority: 1
+  category: MyString
+  due: 2014-06-24 08:15:29
+  start: 2014-06-24 08:15:29
+  timelength: 2014-06-24 08:15:29
+  reward: MyString
+  autopriority: 1
+
+two:
+  title: MyString
+  description: MyString
+  priority: 1
+  category: MyString
+  due: 2014-06-24 08:15:29
+  start: 2014-06-24 08:15:29
+  timelength: 2014-06-24 08:15:29
+  reward: MyString
+  autopriority: 1
