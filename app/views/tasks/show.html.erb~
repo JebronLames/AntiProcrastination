@@ -27,7 +27,14 @@
 	}
 }
 </style>
+<p> 
+  <strong>Task: </strong>
+  <%= @task.title %> 
+</p>
 
-<h>Task destroyed</h>
+<p>
+  <strong> Description: </strong>
+  <%= @task.description %> 
+</p>
 
 <%= link_to 'Back', tasks_path %>

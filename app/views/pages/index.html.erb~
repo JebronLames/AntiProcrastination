@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AntiProcrastination</title>
+  <title>Antiprocrastination</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -28,6 +28,7 @@
 }
 </style>
 
-<h>Task destroyed</h>
-
-<%= link_to 'Back', tasks_path %>
+<h1> AntiProcrastination App </h1>
+<%= link_to 'View Current Tasks', controller: 'tasks' %>
+<br>
+<%= link_to 'Add a task', new_task_path %>

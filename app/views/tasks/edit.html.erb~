@@ -1,20 +1,48 @@
-<h1> Current Tasks </h1> 
-<table> 
-  <tr> 
-    <th> Task </th>
-    <th> Description </th>
-  </tr>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AntiProcrastination</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-  <% @tasks.each do |t| %>
-    <tr>
-      <td><%= t.title %></td>
-      <td><%= t.description %></td>
-      <td><%= link_to 'Show', task_path(t) %></td>
-      <td><%= link_to 'Edit', edit_task_path(t) %></td>
-      <td><%= link_to 'Destroy', task_path(t),
-                    method: :delete, data: { confirm: 'Are you sure?' } %>
-    </tr>
-  <% end %>
-<%= link_to 'Create Task', new_task_path%>
-</table>
+<style type="text/css">
+	body{
+		background-color: #ADD8E6;
+	}
+	h1{
+		color: #0000CD;
+		text-decoration: bold;
+		font-family: "Helvetica"
+	}
+	p{
+		color: #0000CD;
+		font-family: "Helvetica"
+	}
+	a{
+		color: #00008B;
+		font-family: "Helvetica"
+	}
+}
+</style>
 
+<h1> New Task </h1>
+<%= form_for :task, url: tasks_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+<%= link_to 'Back', tasks_path %>
