@@ -7696,6 +7696,7 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-25 12:19:08
 Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-25 12:19:08 -0600
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2014-06-26 08:11:06 -0600
   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by PagesController#index as HTML
@@ -15624,3 +15625,162 @@ Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-26 12:35:09 -0600
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-26 12:35:09 -0600
+=======
+Started GET "/" for 127.0.0.1 at 2014-06-25 14:01:41 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 66ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-25 14:01:41 -0600
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-06-25 14:01:41 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-25 14:01:41 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:41 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:41 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:41 -0600
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:41 -0600
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:41 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:41 -0600
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-06-25 14:01:51 -0600
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2014-06-25 14:01:57 -0600
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.erb within layouts/application (58.9ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-25 14:01:57 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:57 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:57 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:57 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-25 14:01:57 -0600
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-06-25 14:01:57 -0600
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:57 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:57 -0600
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-25 14:01:57 -0600
+
+
+Started POST "/tasks" for 127.0.0.1 at 2014-06-25 14:02:03 -0600
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IoD2kh4QskcXcIbi2IKs5JT2Q7PH6EO3HRc8lLVAkQI=", "task"=>{"title"=>";kfk;sf", "description"=>"asdfsldfksj"}, "commit"=>"Save Task"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "tasks" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-06-25 20:02:03.558478"], ["description", "asdfsldfksj"], ["title", ";kfk;sf"], ["updated_at", "2014-06-25 20:02:03.558478"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/tasks/18
+Completed 302 Found in 14ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/tasks/18" for 127.0.0.1 at 2014-06-25 14:02:03 -0600
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks"  WHERE "tasks"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered tasks/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-25 14:02:03 -0600
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-06-25 14:02:03 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-25 14:02:03 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:03 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:03 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:03 -0600
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:03 -0600
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:03 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:03 -0600
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-06-25 14:02:05 -0600
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-25 14:02:16 -0600
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-06-25 14:02:16 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-25 14:02:16 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:16 -0600
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2014-06-25 14:02:16 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:16 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:16 -0600
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:16 -0600
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:16 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-25 14:02:16 -0600
+>>>>>>> bf0b6bc4387be6abb3f8e4ec4c22a7122c4c8559
