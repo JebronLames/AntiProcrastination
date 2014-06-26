@@ -1,0 +1,17 @@
+body{
+	background-color: #ADD8E6;
+}
+h1{
+	color: #0000CD;
+	text-decoration: bold;
+	font-family: "Helvetica"
+}
+p{
+	color: #0000CD;
+	font-family: "Helvetica"
+}
+a{
+	color: #00008B;
+	font-family: "Helvetica"
+}
+

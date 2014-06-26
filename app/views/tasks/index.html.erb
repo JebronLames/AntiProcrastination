@@ -1,20 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AntiProcrastination</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
 <h1> Current Tasks </h1> 
 <table> 
   <tr> 
-    <th> Task </th>
+    <th> <%= sortable "task" %> </th>
     <th> Description </th>
+    <th> <%= sortable "due" %> </th>
+    <th> <%= sortable "priority" %> </th>
   </tr>
 
   <% @tasks.each do |t| %>
     <tr>
       <td><%= t.title %></td>
       <td><%= t.description %></td>
+      <td><%= t.due %></td>
+      <td><%= t.priority %> </td>
       <td><%= link_to 'Show', task_path(t) %></td>
       <td><%= link_to 'Edit', edit_task_path(t) %></td>
       <td><%= link_to 'Destroy', task_path(t),
                     method: :delete, data: { confirm: 'Are you sure?' } %>
-    </tr>
-  <% end %>
+    </tr> 
+  <% end %>  
+
+
+
 <%= link_to 'Create Task', new_task_path%>
 </table>
+
+</body>
 
