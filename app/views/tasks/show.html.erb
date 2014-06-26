@@ -5,28 +5,10 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<style type="text/css">
-	body{
-		background-color: #ADD8E6;
-	}
-	h1{
-		color: #0000CD;
-		text-decoration: bold;
-		font-family: "Helvetica"
-	}
-	p{
-		color: #0000CD;
-		font-family: "Helvetica"
-	}
-	a{
-		color: #00008B;
-		font-family: "Helvetica"
-	}
-}
-</style>
 <p> 
   <strong>Task: </strong>
   <%= @task.title %> 
@@ -35,6 +17,16 @@
 <p>
   <strong> Description: </strong>
   <%= @task.description %> 
+</p>
+
+<p>
+  <strong> Due Date: </strong>
+  <%= @task.due.strftime("%I:%M on %A %m-%d-%Y") %>
+</p>
+
+<p>
+  <strong> Priority </strong>
+  <%= @task.priority %>
 </p>
 
 <%= link_to 'Back', tasks_path %>

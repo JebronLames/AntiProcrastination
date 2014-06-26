@@ -19,16 +19,3 @@ h1{color: #0000CD; text-decoration: bold; font-family: "Helvetica"}
 p{color: #0000CD; font-family: "Helvetica"}
 a{color: #00008B; font-family: "Helvetica"}
 
-.pretty th .current {
-  padding-right: 12px;
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-
-.pretty th .asc {
-  background-image: url(/images/up_arrow.gif);
-}
-
-.pretty th .desc {
-  background-image: url(/images/down_arrow.gif);
-}
