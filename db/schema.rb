@@ -11,20 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624141529) do
-
-  create_table "tasks", force: true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.integer  "priority"
-    t.string   "category"
-    t.datetime "due"
-    t.datetime "start"
-    t.time     "timelength"
-    t.string   "reward"
-    t.integer  "autopriority"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
