@@ -9,7 +9,7 @@ helper_method :sort_column, :sort_direction
 	end 
 
 	def index
-		@tasks = Task.all
+		@tasks = Task.order(sort_column + " " + sort_direction)
 
 	end
 
@@ -41,7 +41,7 @@ helper_method :sort_column, :sort_direction
 		end
 
 		def sort_column
-			Task.column_names.include?(params[:sort]) ? params[:sort] : "name"
+			Task.column_names.include?(params[:sort]) ? params[:sort] : "title"
 		end
 
 		def sort_direction

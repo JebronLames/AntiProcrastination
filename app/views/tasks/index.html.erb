@@ -12,10 +12,10 @@
 <h1> Current Tasks </h1> 
 <table> 
   <tr> 
-    <th> <%= sortable "task" %> </th>
+    <th> <%= sortable "title"%> </th>
     <th> Description </th>
-    <th> <%= sortable "due" %> </th>
-    <th> <%= sortable "priority" %> </th>
+    <th> <%= sortable "due"%> </th>
+    <th> <%= sortable "priority"%> </th>
   </tr>
 
   <% @tasks.each do |t| %>
