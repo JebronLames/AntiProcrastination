@@ -5,6 +5,11 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
+
+  <p>
+    <%= f.label :category %><br>
+    <%= f.select(:category, options_for_select(["Social","Work"]))%>
+  </p>
  
   <p>
     <%= f.label :text %><br>
@@ -17,7 +22,7 @@
   </p>
 
   <p>
-    <%=f.label :priority %>
+    <%=f.label :priority %><br>
     <%= f.select(:priority, options_for_select([["High", 1],["Medium",2],["Low",3]]))%>
   </p>
 
