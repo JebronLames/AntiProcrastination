@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="/assets/custom.css?body=1" media="screen" rel="stylesheet">
+  <link href="/assets/bootstrap.css?body=1" media="screen" rel="stylesheet">
   <title>AntiProcrastination</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
 </head>
 <body>
-
-<h1> Current Tasks </h1> 
+<h2> Current Tasks </h2> 
 
 <pre><%= link_to 'Create Task', new_task_path%><br>
 
@@ -26,7 +24,7 @@
       <td><%= t.description %></td>
       <td><%= t.due %></td>
       <td>  <% if t.priority == 1%>
-	High
+	    High 
   <% end %>
   <% if t.priority == 2%>
 	Medium

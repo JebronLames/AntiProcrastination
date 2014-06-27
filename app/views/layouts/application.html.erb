@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AntiProcrastinationApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <link href="/assets/custom.css?body=1" media="screen" rel="stylesheet">
+  <link href="/assets/bootstrap.css?body=1" media="screen" rel="stylesheet">
+  <title>AntiProcrastination</title>
 </head>
 <body>
-
+<%= render 'header' %>
 <%= yield %>
+<%= render 'footer' %>
 
 </body>
 </html>
