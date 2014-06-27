@@ -8,8 +8,10 @@
 </head>
 <body>
 
-
 <h1> Current Tasks </h1> 
+
+<pre><%= link_to 'Create Task', new_task_path%><br>
+
 <table> 
   <tr> 
     <th> <%= sortable "title"%> </th>
@@ -23,17 +25,21 @@
       <td><%= t.title %></td>
       <td><%= t.description %></td>
       <td><%= t.due %></td>
-      <td><%= t.priority %> </td>
+      <td>  <% if t.priority == 1%>
+	High
+  <% end %>
+  <% if t.priority == 2%>
+	Medium
+  <% end %>
+  <% if t.priority == 3%>
+	Low
+  <% end %> </td>
       <td><%= link_to 'Show', task_path(t) %></td>
       <td><%= link_to 'Edit', edit_task_path(t) %></td>
       <td><%= link_to 'Destroy', task_path(t),
-                    method: :delete, data: { confirm: 'Are you sure?' } %>
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr> 
   <% end %>  
-
-
-
-<%= link_to 'Create Task', new_task_path%>
 </table>
 
 </body>
