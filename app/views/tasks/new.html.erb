@@ -1,5 +1,7 @@
 
+<div class="container">
 <h1> New Task </h1>
+
 <%= form_for :task, url: tasks_path do |f| %>
   <p>
     <%= f.label :title %><br>
@@ -18,7 +20,7 @@
 
   <p>
     <%= f.label :due %><br>
-    <%= f.datetime_select :due, {:ampm=> true} %>
+    <%= f.datetime_select :due, :ampm=> true, :minute_step => 15 %>
   </p>
 
   <p>
@@ -32,3 +34,4 @@
 
 <% end %>
 <%= link_to 'Back', tasks_path %>
+</div>
