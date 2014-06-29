@@ -1,44 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="/assets/custom.css?body=1" media="screen" rel="stylesheet">
-  <link href="/assets/bootstrap.css?body=1" media="screen" rel="stylesheet">
   <title>AntiProcrastination</title>
 </head>
 <body>
-<h2> Current Tasks </h2> 
 
-<pre><%= link_to 'Create Task', new_task_path%><br>
+<h2>  Today is <%= Time.now %> </h2> 
 
-<table> 
-  <tr> 
-    <th> <%= sortable "title"%> </th>
-    <th> Description </th>
-    <th> <%= sortable "due"%> </th>
-    <th> <%= sortable "priority"%> </th>
-  </tr>
+<%= link_to 'Create Task', new_task_path%>
+ 
+  <div class="sorts">
+     <%= sortable "title"%> 
+     Description 
+     <%= sortable "due"%> 
+     <%= sortable "priority"%> 
+  </div>
+
 
   <% @tasks.each do |t| %>
-    <tr>
-      <td><%= t.title %></td>
-      <td><%= t.description %></td>
-      <td><%= t.due %></td>
-      <td>  <% if t.priority == 1%>
-	    High 
-  <% end %>
-  <% if t.priority == 2%>
-	Medium
-  <% end %>
-  <% if t.priority == 3%>
-	Low
-  <% end %> </td>
-      <td><%= link_to 'Show', task_path(t) %></td>
-      <td><%= link_to 'Edit', edit_task_path(t) %></td>
-      <td><%= link_to 'Destroy', task_path(t),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr> 
+      <div class="square">
+      <div class="title"><%= t.title %></div>
+      <div class="description"> <%= t.description %> </div>
+      Priority: <% if t.priority == 1%>High<% end %><% if t.priority == 2%>Medium<%end %><% if t.priority == 3%>Low<% end %> <br>
+      <%= t.due.strftime("%I:%M on %A %m/%d") %> <br>
+      <%= link_to 'Show', task_path(t) %>
+      <%= link_to 'Edit', edit_task_path(t) %>
+      <%= link_to 'Destroy', task_path(t),
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+     </div>
   <% end %>  
-</table>
 
 </body>
 
