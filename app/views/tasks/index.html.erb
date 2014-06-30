@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AntiProcrastination</title>
+  <title>AntiProcrastinationApp</title>
 </head>
 <body>
 
@@ -9,23 +9,29 @@
 
 <div class="createt"><%= link_to 'Create Task', new_task_path%></div>
  
+  <!-- Sorting mechanisms.  Use helper functions. -->
   <div class="sorts">
      <%= sortable "title"%> 
      <%= sortable "due"%> 
      <%= sortable "priority"%> 
      <%= sortable "created_at", "Created"%>
+     <%= sortable "done", "Finished" %>
   </div>
 
 
   <% @tasks.each do |t| %>
-
-      <% if t.done == false %>
+    <!-- Displays all pending tasks -->
+    <% if t.done == false %>
+      <!-- Colors task square according to priority -->
       <% if t.priority == 1%><div class="square1"><% end %><% if t.priority == 2%><div class="square2"><%end %><% if t.priority == 3%><div class="square3"><% end %> 
       <div class="title"><%= t.title %></div>
       <div class="description"><%= t.description%></div>
       <div class="details">
+      <!-- Priority is mapped to numbers 1,2,3.  -->
       Priority: <% if t.priority == 1%>High<% end %><% if t.priority == 2%>Medium<%end %><% if t.priority == 3%>Low<% end %> <br>
-      Created <%= distance_of_time_in_words(t.created_at, Time.now) %> ago. <br> 
+      <!-- Difference between now and when created in words -->
+      Created <%= distance_of_time_in_words(t.created_at, Time.now) %> ago. <br>
+      <!-- Due date  -->
       Complete before <%= t.due.strftime("%A %m/%d at %I:%M") %> <br>
 
       <%= link_to 'Edit', edit_task_path(t) %>
@@ -33,14 +39,30 @@
       <%= link_to 'Done', flop_task_path(t) %>
       </div>
      </div>
+    <% end %>
   <% end %>
+  <% if @tasks.count == 0 %>
+    <div class="center"> <h3> You have not completed a task. </h3></div>
   <% end %>
 
-  # This block is used to display finished Tasks.  
+  <!-- Trying to figure out a way to check if there is more than 1 finished tasks
+  <% if @tasks.count > 0 %>
+    <span> <div class="center1"> <h3> Finished: </h3> </div> </span>
+  <% end %>
+  -->
+
+  <!-- This block is used to display finished Tasks. -->   
   <% @tasks.each do |t| %>
-     <% if t.done == true %>
-     <% end %>
-   
+    <% if t.done == true%>
+      <div class="squareDone"> 
+        <div class="title"><%= t.title %><div class="details">has been completed.
+        <%= link_to 'Delete', task_path(t), method: :delete %>
+        </div>
+
+      </div>
+      </div>
+    <% end %>
+   <% end %>
 
 </body>
 
