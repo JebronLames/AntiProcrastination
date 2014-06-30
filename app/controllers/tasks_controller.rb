@@ -27,6 +27,7 @@ helper_method :sort_column, :sort_direction
 	def destroy 
 		@task = Task.find(params[:id])
 		@task.destroy
+		redirect_to tasks_path
 	end
 
 	def edit

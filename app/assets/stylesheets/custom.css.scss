@@ -20,11 +20,35 @@ a{color: #10008B;
 	padding: 10px;
 }
 
-.square {
+.square1 {
 	display: block;
   width: 300px;
   padding: 10px;
-  background-color: #FFFFF9;
+  background-color: #FFCB70;
+  border-radius: 20px;
+  margin: 5px;
+  word-wrap: break-word;
+  text-align: left;
+  float: left;
+}
+
+.square2 {
+	display: block;
+  width: 300px;
+  padding: 10px;
+  background-color: #FFFA75;
+  border-radius: 20px;
+  margin: 5px;
+  word-wrap: break-word;
+  text-align: left;
+  float: left;
+}
+
+.square3 {
+	display: block;
+  width: 300px;
+  padding: 10px;
+  background-color: #FFFFF0;
   border-radius: 20px;
   margin: 5px;
   word-wrap: break-word;
@@ -40,4 +64,9 @@ a{color: #10008B;
 
 .description {
 	font-size: 17px
+}
+
+.navbar-default {
+    background-color: #FFFFF0;
+    border-color: 'black';
 }
