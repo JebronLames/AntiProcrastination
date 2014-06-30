@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  resources :tasks do
+      member do
+          get :flop 
+      end
+  end
+  
   resources :tasks
   get 'pages/index'
 
