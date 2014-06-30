@@ -10,7 +10,7 @@ class CreateTasks < ActiveRecord::Migration
       t.time :timelength
       t.string :reward
       t.integer :autopriority
-
+      t.boolean :done
       t.timestamps
     end
   end
