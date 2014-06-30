@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<div class="center"><h2>  Today is <%= Time.now %> </h2> </div>
+<div class="center"><h2>  Today is <%= Time.now.strftime("%A, %B %d") %> </h2> </div>
 
 <%= link_to 'Create Task', new_task_path%>
  
@@ -22,6 +22,8 @@
       <div class="description"> <%= t.description %> </div>
       Priority: <% if t.priority == 1%>High<% end %><% if t.priority == 2%>Medium<%end %><% if t.priority == 3%>Low<% end %> <br>
       <%= t.due.strftime("%I:%M on %A %m/%d") %> <br>
+      <%= time_ago_in_words(Time.now) %>
+      <%= t.created_at %>
       <%= link_to 'Show', task_path(t) %>
       <%= link_to 'Edit', edit_task_path(t) %>
       <%= link_to 'Destroy', task_path(t), method: :delete, data: { confirm: 'Are you sure?' } %>
