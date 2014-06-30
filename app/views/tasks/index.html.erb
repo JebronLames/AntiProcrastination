@@ -18,6 +18,7 @@
 
 
   <% @tasks.each do |t| %>
+      <% if t.done == false %>
       <% if t.priority == 1%><div class="square1"><% end %><% if t.priority == 2%><div class="square2"><%end %><% if t.priority == 3%><div class="square3"><% end %> 
       <div class="title"><%= t.title %></div>
       <div class="description"><%= t.description%></div>
@@ -30,6 +31,10 @@
       <%= link_to 'Delete', task_path(t), method: :delete %>
       </div>
      </div>
+  <% end %>
+     <% if t.done == true %>
+     <h2> Finished Tasks </h2>
+     <% end %>
   <% end %>  
 
 </body>
