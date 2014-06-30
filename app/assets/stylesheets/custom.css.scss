@@ -4,9 +4,9 @@ body{
 background-color: #ADD8E6
 }
 
-h1{
-color: #0090CD; 
+h1{ 
 text-decoration: bold; 
+font-size: 40px;
 }
 
 p{
@@ -17,12 +17,19 @@ a{color: #10008B;
  }
 
 .sorts {
-	padding: 10px;
+	padding-bottom: 13px;
+  text-align: center;
+}
+
+.createt{
+  text-align: center;
+  padding: 10px;
+  font-size: 22px;
 }
 
 .square1 {
 	display: block;
-  width: 300px;
+  width: 280px;
   padding: 10px;
   background-color: #FFCB70;
   border-radius: 20px;
@@ -30,11 +37,12 @@ a{color: #10008B;
   word-wrap: break-word;
   text-align: left;
   float: left;
+  padding-left: 10px;
 }
 
 .square2 {
 	display: block;
-  width: 300px;
+  width: 310px;
   padding: 10px;
   background-color: #FFFA75;
   border-radius: 20px;
@@ -42,11 +50,12 @@ a{color: #10008B;
   word-wrap: break-word;
   text-align: left;
   float: left;
+  padding-left: 10px;
 }
 
 .square3 {
 	display: block;
-  width: 300px;
+  width: 290px;
   padding: 10px;
   background-color: #FFFFF0;
   border-radius: 20px;
@@ -54,17 +63,32 @@ a{color: #10008B;
   word-wrap: break-word;
   text-align: left;
   float: left;
+  padding-left: 10px;
 }
 
 .title {
-	font-size: 20px
+	font-size: 30px;
+  padding: 1px;
+  text-decoration: bold;
 }
-
-
 
 .description {
-	font-size: 17px
+  font-size: 22px;
 }
+.details {
+  font-size: 13px;
+  padding: -1px;
+
+}
+
+.center{
+  text-align: center;
+  font-size: 40px;
+}
+
+
+
+
 
 .navbar-default {
     background-color: #FFFFF0;

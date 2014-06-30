@@ -38,7 +38,7 @@ helper_method :sort_column, :sort_direction
 	private 
 		def task_params
 			params.require(:task).permit(:title, :description, :priority, :category, :due,
-				:start, :timelength, :reward, :autopriority)
+				:start, :timelength, :reward, :autopriority, :done)
 		end
 
 		def sort_column
