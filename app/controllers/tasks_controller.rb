@@ -19,7 +19,7 @@ helper_method :sort_column, :sort_direction
 		@task = Task.new(task_params)
 		if @task.save
 			redirect_to @task
-		else 
+		else
 			render 'new'
 		end  
 	end

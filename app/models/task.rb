@@ -3,5 +3,6 @@ class Task < ActiveRecord::Base
 	def default_values
 		self.done ||= 'false'
 	end
-	validates :title, presence: true
+	validates :title, presence: true 
+	validates :description, length: {maximum: 560}
 end
