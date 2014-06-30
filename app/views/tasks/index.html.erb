@@ -25,7 +25,7 @@
       Priority: <% if t.priority == 1%>High<% end %><% if t.priority == 2%>Medium<%end %><% if t.priority == 3%>Low<% end %> <br>
       Created <%= distance_of_time_in_words(t.created_at, Time.now) %> ago. <br> 
       Complete before <%= t.due.strftime("%A %m/%d at %I:%M") %> <br>
-       
+
       <%= link_to 'Edit', edit_task_path(t) %>
       <%= link_to 'Delete', task_path(t), method: :delete, data: { confirm: 'Are you sure? Task is not finished!' } %>
       </div>
