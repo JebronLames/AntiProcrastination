@@ -27,7 +27,7 @@
       Complete before <%= t.due.strftime("%A %m/%d at %I:%M") %> <br>
 
       <%= link_to 'Edit', edit_task_path(t) %>
-      <%= link_to 'Delete', task_path(t), method: :delete, data: { confirm: 'Are you sure? Task is not finished!' } %>
+      <%= link_to 'Delete', task_path(t), method: :delete %>
       </div>
      </div>
   <% end %>  
