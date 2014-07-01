@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20140630230248) do
     t.time     "timelength"
     t.string   "reward"
     t.integer  "autopriority"
+    t.boolean  "done"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "done"
     t.boolean  "flag"
     t.integer  "counter"
   end
