@@ -28,7 +28,7 @@
 
   <p>
     <%= f.label :due %><br>
-    <%= f.datetime_select :due, {:ampm=> true} %>
+    <%= f.datetime_select( :due, :ampm=> true, :minute_step => 15) %>
   </p>
 
   <p>
