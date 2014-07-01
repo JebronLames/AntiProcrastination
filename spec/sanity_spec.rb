@@ -9,7 +9,7 @@ RSpec.describe Sanity_Class do
   end
   
   describe '#retOne False Sanity' do
-     it 'returns 2. THIS SHOULD FAIL.' do
+     it 'returns 2. THIS SHOULD FAIL. Checking rspec\'s sanity' do
 	@sanity_object = Sanity_Class.new()
 	expect(@sanity_object.retOne()).to eq(2)
 	end
