@@ -26,6 +26,7 @@
       <!--Change task color to red if it is past due date -->
       <% if Time.zone.now > due_adjusted %><div class="square4">
       <% else %>
+
       <!-- Colors task square according to priority -->
       <% if t.priority == 1%><div class="square1"><% end %><% if t.priority == 2%><div class="square2"><%end %><% if t.priority == 3%><div class="square3"><% end %> 
       <% end %>
@@ -48,7 +49,7 @@
     <% end %>
   <% end %>
   <% if @tasks.count == 0 %>
-    <div class="center"> <h3> You have not completed a task. </h3></div>
+    <div class="center"> <h3> No Pending Tasks! :) </h3></div>
   <% end %>
 
   <!-- Trying to figure out a way to check if there is more than 1 finished tasks
