@@ -1,7 +1,13 @@
 AntiProcrastination
 ====================
 
+Project Members: Alex Rose, Alex Uribe, Jordan McNally, Zac Schiff
+
+The code in this repository that the above project members authored is public domain, as agreed upon by the above authors.
+
 Anti-procratination app for CSCI3308
+
+Currently hosted on antiprocrastination.herokuapp.com
 
 Very basic rails app.  
 
