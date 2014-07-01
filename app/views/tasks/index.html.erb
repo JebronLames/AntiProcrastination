@@ -24,6 +24,10 @@
     <% if t.done == false %>
       <!-- Colors task square according to priority -->
       <% if t.priority == 1%><div class="square1"><% end %><% if t.priority == 2%><div class="square2"><%end %><% if t.priority == 3%><div class="square3"><% end %> 
+
+      <!--Change task color to red if it is past due date -->
+      <% if Time.now > t.due %><div class="square4"><% end%>
+
       <div class="title"><%= t.title %></div>
       <div class="description"><%= t.description%></div>
       <div class="details">
