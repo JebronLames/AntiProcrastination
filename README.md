@@ -18,9 +18,17 @@ Documentation located in /doc (from the top level).
 
 To compile code and run our application on a local server: 
 
--Download the code repository. 
--In the main branch with Rails installed, run the command $rails s (Requires Rails)
--By default, the server will be hosted locally at http://0.0.0.0:3000.
+Download the code repository. <br>
+In the main branch with Rails installed, run the command: <br>
+$ rails s (Requires Rails) <br>
+By default, the server will be hosted locally at http://0.0.0.0:3000. <br>
+
+To run unit testing:
+
+With rspec version 3.0.0, run the command: <br>
+$ rspec <br>
+This will run all test suites by default. For running a specific test suite, run the command: <br>
+rspec spec/SUITENAME.rb <br>
 
 Things to add: <br>
 User log in support <br>
