@@ -9,7 +9,7 @@ Anti-procratination app for CSCI3308
 
 Currently hosted on antiprocrastination.herokuapp.com
 
-Very basic rails app.  
+Very basic rails app. 
 
 Rails version 4.1.1 <br>
 Ruby version ruby 2.1.1p76 (2014-02-24 revision 45161) [x86_64-darwin13.0]

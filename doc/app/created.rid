@@ -1,0 +1,9 @@
+Wed, 02 Jul 2014 22:32:42 -0600
+README.rdoc	Wed, 02 Jul 2014 22:20:47 -0600
+app/controllers/application_controller.rb	Wed, 02 Jul 2014 22:26:58 -0600
+app/controllers/pages_controller.rb	Wed, 02 Jul 2014 22:26:30 -0600
+app/controllers/tasks_controller.rb	Wed, 02 Jul 2014 22:31:17 -0600
+app/helpers/application_helper.rb	Wed, 02 Jul 2014 22:32:22 -0600
+app/helpers/pages_helper.rb	Wed, 02 Jul 2014 22:32:29 -0600
+app/helpers/tasks_helper.rb	Wed, 02 Jul 2014 22:32:37 -0600
+app/models/task.rb	Wed, 02 Jul 2014 22:27:54 -0600
