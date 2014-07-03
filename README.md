@@ -9,6 +9,12 @@ Anti-procratination app for CSCI3308
 
 Currently hosted on antiprocrastination.herokuapp.com
 
+Can also be run locally by typing 'rails server' into the command line and going to 0.0.0.0:3000 in a browser. If run locally, the command 'rake db:migrate' may need to be run from the command line.
+
+Documentation found in doc/app/index.html
+
+Tests can be run by running 'rspec' from the command line
+
 Very basic rails app. 
 
 Rails version 4.1.1 <br>
