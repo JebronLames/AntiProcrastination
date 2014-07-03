@@ -14,6 +14,14 @@ Very basic rails app.
 Rails version 4.1.1 <br>
 Ruby version ruby 2.1.1p76 (2014-02-24 revision 45161) [x86_64-darwin13.0]
 
+Documentation located in /doc (from the top level).
+
+To compile code and run our application on a local server: 
+
+-Download the code repository. 
+-In the main branch with Rails installed, run the command $rails s (Requires Rails)
+-By default, the server will be hosted locally at http://0.0.0.0:3000.
+
 Things to add: <br>
 User log in support <br>
 Nicer Front end <br>
